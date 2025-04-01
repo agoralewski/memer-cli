@@ -84,8 +84,7 @@ def get_typer_command_by_name(app: typer.Typer, command_name: str) -> Callable[.
         command for command in app.registered_commands if command.name == command_name
     ]
     if len(discovered_commands) > 1:
-        error_message = f"Multiple commands with the name '{
-            command_name}' found."
+        error_message = f"Multiple commands with the name '{command_name}' found."
         raise TyperCommandGetterError(error_message)
 
     if not discovered_commands:
@@ -93,8 +92,7 @@ def get_typer_command_by_name(app: typer.Typer, command_name: str) -> Callable[.
         raise TyperCommandGetterError(error_message)
 
     if discovered_commands[0].callback is None:
-        error_message = f"The command '{
-            command_name}' has no function associated with it."
+        error_message = f"The command '{command_name}' has no function associated with it."
         raise TyperCommandGetterError(error_message)
 
     return discovered_commands[0].callback
