@@ -151,8 +151,7 @@ class FontConfiguration(BaseModel):
             if self._font_exists(path):
                 return self._get_full_font_path(search_path=path)
 
-        error_message = f"Default font not found in any of the search paths. Looked at: {
-            DEFAULT_FONT_PATH} and at {self.search_paths}"
+        error_message = f"Default font not found in any of the search paths. Looked at: {DEFAULT_FONT_PATH} and at {self.search_paths}"
         raise ConfigurationValidationError(error_message)
 
 
