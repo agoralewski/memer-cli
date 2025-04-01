@@ -145,8 +145,7 @@ def pull(
             )
             continue
 
-    rich.print(f"Successfully pulled {
-               len(to_pull_list)-len(failed_downloads)} templates")
+    rich.print(f"Successfully pulled {len(to_pull_list)-len(failed_downloads)} templates")
     if failed_downloads:
         rich.print(
             "[yellow]Error while pulling templates (please check " "the provided URL(s)):[/yellow]"
