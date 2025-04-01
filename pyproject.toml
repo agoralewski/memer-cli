@@ -3,7 +3,7 @@ name = "memer"
 version = "0.5.0"
 description = "A CLI tool to generate memes!"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "pillow>=10.4.0",
     "platformdirs>=4.3.6",
